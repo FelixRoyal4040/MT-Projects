@@ -1,0 +1,29 @@
+    *{
+      margin: 0;
+    }
+
+    .footer-conteiner{
+      background-image: url(../images/s-sky.png);
+      background-position: 125px;
+      color: rgb(22,76,104);
+      height: 300px;
+      font-family: Arial;
+    }
+    .sla-conteiner{
+      margin-left: 40px;
+    }
+
+    .sla-conteiner div{
+      width: 350px;
+    }
+
+    .btn-contact{
+      margin-top: 20px;
+      margin-left: 36px;
+      background-color: rgb(45,112,143);
+      border: none;
+      height: 36px;
+      border-radius: 10px;
+      color: white;
+      cursor: pointer;
+    }

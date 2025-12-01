@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Insónia</title>
+  <link rel="stylesheet" href="style/insoni.css">
+  <style>
+    *{
+      margin: 0;
+    }
+
+    body{
+      color: white;
+      font-family: Arial;
+    }
+  
+    header{
+      width: 100%;
+      height: 70px;
+      background-color: rgb(105, 41, 165);
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+    }
+    
+    .conteiner{
+      background-color: rgb(105, 41, 165);
+      height: 550px;
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+      color: white;
+    }
+    .conteiner section h1{
+      font-size: 40pt;
+      margin-bottom: 20px;
+    }
+    .conteiner section h2{
+      font-size: 40pt;
+    }
+
+    .square{
+      width: 400px;
+      height: 400px;
+      background-color: rgb(137, 57, 212);
+      border-radius: 30px;
+    }
+    
+
+    nav{
+      display: flex;
+      gap: 30px;
+    }
+
+    a{
+      text-decoration: none;
+      color: white;
+    }
+
+    .div-sla{
+      width: 100%;
+      padding: 20px 0;
+      background-color: rgb(240, 240, 240);
+      display: flex;
+      flex-wrap: wrap;
+      gap: 5px;
+      justify-content: center;
+      align-items: center;
+    }
+    .div-sla section{
+      display: flex;
+      padding: 40px 20px ;
+      gap: 20px;
+      width: fit-content;
+      background-color: white;
+      margin: 3px;
+      color: black;
+    }
+    .div-sla section p{
+      opacity: 0.5;
+    }
+
+    .img-scrolled section{
+      width: 100%;
+      height: 100px;
+      background-image: url("https://insoni-ap.vercel.app/static/media/single-image3.542c1d65.jpg");
+      border: 1px solid #555;
+      background-size: cover;
+      background-attachment: fixed;
+    }
+
+    .Electronicos-Principal{
+      margin: 50px 0px 0px 125px ;
+      display: flex;
+      flex-direction: column;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h3>Insónia</h3>
+    <nav>
+      <a href="login/insonia-login.html">Login</a>
+      <a href="login/insonia-login.html">Cadastrar-se</a>
+      <a href="">Carrinho</a>      
+    </nav>
+  </header>
+  <div style="background-color: black; width: 100%; height: 0.5px;"></div>
+  <div class="conteiner">
+    <section>
+      <h1>BEM-VINDO AO</h1>
+      <h2>INSÓNIA APP</h2>
+      <div style="background-color: white; color: black; width: fit-content; padding: 2px;"><p>24H a sua disposição</p></div>
+    </section>
+    <section>
+      <div class="square">
+        <img src="pictures/saving-img.3044b173.png" alt="" width="500" height="400">
+      </div>
+    </section>
+  </div>
+
+  <div class="div-sla">
+    <section>
+      <div>
+        <img src="pictures/free.599b63f6.svg" alt="" width="50">
+      </div>
+      <div>
+        <h3>Entregas Grátis</h3>
+        <div style="margin-top: 20px;">
+          <p>Consectetur adipi elit lorem </p>
+          <p> ipsum dolor sit ament.</p>
+        </div>
+      </div>
+    </section>
+    <section>
+      <div>
+        <img src="pictures/high-quality.9a6ca716.svg" alt="" width="50">
+      </div>
+      <div>
+        <h3>Qualidade Garantida</h3>
+        <div style="margin-top: 20px;">
+          <p>Consectetur adipi elit lorem </p>
+          <p> ipsum dolor sit ament.</p>
+        </div>
+      </div>
+    </section>
+    <section>
+      <div>
+        <img src="pictures/truck.b279be98.svg" alt="" width="50">
+      </div>
+      <div>
+        <h3>100% Seguro</h3>
+        <div style="margin-top: 20px;">
+          <p>Consectetur adipi elit lorem </p>
+          <p> ipsum dolor sit ament.</p>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <div class="img-scrolled">
+    <section>
+    
+    </section>
+  </div>
+
+  <div class="Electronicos-Principal">
+    <h3 style="color: black; margin-left: 30px;">Electronicos</h3>
+    <div class="electronics">
+    <section>
+    <div>
+      <img src="pictures/079fb574-e319-493d-a49f-e8fed3994201.5860519b.png" alt="" width="150" height="150">
+      <button class="btn-favorite"><img src="../favorite-border.988a3f96.svg" alt="" width="20" height="20"></button>
+    </div>
+    <span style="font-weight: bold; color: #555;">19.654.454,00 AKZ</span> 
+    <br>
+    <span style="font-weight: bold; color: #555;">iPhone XV Pro Max</span>
+    <br>
+    <br>
+    <button class="add-button">
+      <img src="pictures/add.aac7b5d0.svg" alt="" height="12" width="12">
+      Adicionar
+    </button>
+    </section>
+
+    <section>
+    <div>
+      <img src="pictures/079fb574-e319-493d-a49f-e8fed3994201.5860519b.png" alt="" width="150" height="150">
+      <button class="btn-favorite"><img src="../favorite-border.988a3f96.svg" alt="" width="20" height="20"></button>
+    </div>
+    <span style="font-weight: bold; color: #555;">19.654.454,00 AKZ</span> 
+    <br>
+    <span style="font-weight: bold; color: #555;">iPhone XV Pro Max</span>
+    <br>
+    <br>
+    <button class="add-button">
+      <img src="pictures/add.aac7b5d0.svg" alt="" height="12" width="12">
+      Adicionar
+    </button>
+    </section>
+
+    <section>
+    <div>
+      <img src="pictures/079fb574-e319-493d-a49f-e8fed3994201.5860519b.png" alt="" width="150" height="150">
+      <button class="btn-favorite"><img src="../favorite-border.988a3f96.svg" alt="" width="20" height="20"></button>
+    </div>
+    <span style="font-weight: bold; color: #555;">19.654.454,00 AKZ</span> 
+    <br>
+    <span style="font-weight: bold; color: #555;">iPhone XV Pro Max</span>
+    <br>
+    <br>
+    <button class="add-button">
+      <img src="pictures/add.aac7b5d0.svg" alt="" height="12" width="12">
+      Adicionar
+    </button>
+
+    </section>
+
+    <section>
+    <div>
+      <img src="pictures/079fb574-e319-493d-a49f-e8fed3994201.5860519b.png" alt="" width="150" height="150">
+      <button class="btn-favorite"><img src="../favorite-border.988a3f96.svg" alt="" width="20" height="20"></button>
+    </div>
+    <span style="font-weight: bold; color: #555;">19.654.454,00 AKZ</span> 
+    <br>
+    <span style="font-weight: bold; color: #555;">iPhone XV Pro Max</span>
+    <br>
+    <br>
+    <button class="add-button">
+      <img src="pictures/add.aac7b5d0.svg" alt="" height="12" width="12">
+      Adicionar
+    </button>
+
+    </section>
+
+    <section>
+    <div>
+      <img src="pictures/079fb574-e319-493d-a49f-e8fed3994201.5860519b.png" alt="" width="150" height="150">
+      <button class="btn-favorite"><img src="../favorite-border.988a3f96.svg" alt="" width="20" height="20"></button>
+    </div>
+    <span style="font-weight: bold; color: #555;">19.654.454,00 AKZ</span> 
+    <br>
+    <span style="font-weight: bold; color: #555;">iPhone XV Pro Max</span>
+    <br>
+    <br>
+    <button class="add-button">
+      <img src="pictures/add.aac7b5d0.svg" alt="" height="12" width="12">
+      Adicionar
+    </button>
+
+    </section>
+  </div>
+
+    <h3 style="color: black; margin-left: 30px;">Electronicos1</h3>
+    <div class="electronics">
+    <section>
+    <div>
+      <img src="pictures/079fb574-e319-493d-a49f-e8fed3994201.5860519b.png" alt="" width="150" height="150">
+      <button class="btn-favorite"><img src="../favorite-border.988a3f96.svg" alt="" width="20" height="20"></button>
+    </div>
+    <span style="font-weight: bold; color: #555;">19.654.454,00 AKZ</span> 
+    <br>
+    <span style="font-weight: bold; color: #555;">iPhone XV Pro Max</span>
+    <br>
+    <br>
+    <button class="add-button">
+      <img src="pictures/add.aac7b5d0.svg" alt="" height="12" width="12">
+      Adicionar
+    </button>
+
+    </section>
+
+    <section>
+    <div>
+      <img src="pictures/079fb574-e319-493d-a49f-e8fed3994201.5860519b.png" alt="" width="150" height="150">
+      <button class="btn-favorite"><img src="../favorite-border.988a3f96.svg" alt="" width="20" height="20"></button>
+    </div>
+    <span style="font-weight: bold; color: #555;">19.654.454,00 AKZ</span> 
+    <br>
+    <span style="font-weight: bold; color: #555;">iPhone XV Pro Max</span>
+    <br>
+    <br>
+    <button class="add-button">
+      <img src="pictures/add.aac7b5d0.svg" alt="" height="12" width="12">
+      Adicionar
+    </button>
+
+    </section>
+
+    <section>
+    <div>
+      <img src="pictures/079fb574-e319-493d-a49f-e8fed3994201.5860519b.png" alt="" width="150" height="150">
+      <button class="btn-favorite"><img src="../favorite-border.988a3f96.svg" alt="" width="20" height="20"></button>
+    </div>
+    <span style="font-weight: bold; color: #555;">19.654.454,00 AKZ</span> 
+    <br>
+    <span style="font-weight: bold; color: #555;">iPhone XV Pro Max</span>
+    <br>
+    <br>
+    <button class="add-button">
+      <img src="pictures/add.aac7b5d0.svg" alt="" height="12" width="12">
+      Adicionar
+    </button>
+
+    </section>
+
+    <section>
+    <div>
+      <img src="pictures/079fb574-e319-493d-a49f-e8fed3994201.5860519b.png" alt="" width="150" height="150">
+      <button class="btn-favorite"><img src="../favorite-border.988a3f96.svg" alt="" width="20" height="20"></button>
+    </div>
+    <span style="font-weight: bold; color: #555;">19.654.454,00 AKZ</span> 
+    <br>
+    <span style="font-weight: bold; color: #555;">iPhone XV Pro Max</span>
+    <br>
+    <br>
+    <button class="add-button">
+      <img src="pictures/add.aac7b5d0.svg" alt="" height="12" width="12">
+      Adicionar
+    </button>
+
+    </section>
+
+    <section>
+    <div>
+      <img src="pictures/079fb574-e319-493d-a49f-e8fed3994201.5860519b.png" alt="" width="150" height="150">
+      <button class="btn-favorite"><img src="../favorite-border.988a3f96.svg" alt="" width="20" height="20"></button>
+    </div>
+    <span style="font-weight: bold; color: #555;">19.654.454,00 AKZ</span> 
+    <br>
+    <span style="font-weight: bold; color: #555;">iPhone XV Pro Max</span>
+    <br>
+    <br>
+    <button class="add-button">
+      <img src="pictures/add.aac7b5d0.svg" alt="" height="12" width="12">
+      Adicionar
+    </button>
+
+    </section>
+  </div>
+
+    <h3 style="color: black; margin-left: 30px;">Electronicos2</h3>
+    <div class="electronics">
+    <section>
+    <div>
+      <img src="pictures/079fb574-e319-493d-a49f-e8fed3994201.5860519b.png" alt="" width="150" height="150">
+      <button class="btn-favorite"><img src="../favorite-border.988a3f96.svg" alt="" width="20" height="20"></button>
+    </div>
+    <span style="font-weight: bold; color: #555;">19.654.454,00 AKZ</span> 
+    <br>
+    <span style="font-weight: bold; color: #555;">iPhone XV Pro Max</span>
+    <br>
+    <br>
+    <button class="add-button">
+      <img src="pictures/add.aac7b5d0.svg" alt="" height="12" width="12">
+      Adicionar
+    </button>
+
+    </section>
+
+    <section>
+    <div>
+      <img src="pictures/079fb574-e319-493d-a49f-e8fed3994201.5860519b.png" alt="" width="150" height="150">
+      <button class="btn-favorite"><img src="../favorite-border.988a3f96.svg" alt="" width="20" height="20"></button>
+    </div>
+    <span style="font-weight: bold; color: #555;">19.654.454,00 AKZ</span> 
+    <br>
+    <span style="font-weight: bold; color: #555;">iPhone XV Pro Max</span>
+    <br>
+    <br>
+    <button class="add-button">
+      <img src="pictures/add.aac7b5d0.svg" alt="" height="12" width="12">
+      Adicionar
+    </button>
+
+    </section>
+
+    <section>
+    <div>
+      <img src="pictures/079fb574-e319-493d-a49f-e8fed3994201.5860519b.png" alt="" width="150" height="150">
+      <button class="btn-favorite"><img src="../favorite-border.988a3f96.svg" alt="" width="20" height="20"></button>
+    </div>
+    <span style="font-weight: bold; color: #555;">19.654.454,00 AKZ</span> 
+    <br>
+    <span style="font-weight: bold; color: #555;">iPhone XV Pro Max</span>
+    <br>
+    <br>
+    <button class="add-button">
+      <img src="pictures/add.aac7b5d0.svg" alt="" height="12" width="12">
+      Adicionar
+    </button>
+
+    </section>
+
+    <section>
+    <div>
+      <img src="pictures/079fb574-e319-493d-a49f-e8fed3994201.5860519b.png" alt="" width="150" height="150">
+      <button class="btn-favorite"><img src="../favorite-border.988a3f96.svg" alt="" width="20" height="20"></button>
+    </div>
+    <span style="font-weight: bold; color: #555;">19.654.454,00 AKZ</span> 
+    <br>
+    <span style="font-weight: bold; color: #555;">iPhone XV Pro Max</span>
+    <br>
+    <br>
+    <button class="add-button">
+      <img src="pictures/add.aac7b5d0.svg" alt="" height="12" width="12">
+      Adicionar
+    </button>
+
+    </section>
+
+    <section>
+    <div>
+      <img src="pictures/079fb574-e319-493d-a49f-e8fed3994201.5860519b.png" alt="" width="150" height="150">
+      <button class="btn-favorite"><img src="../favorite-border.988a3f96.svg" alt="" width="20" height="20"></button>
+    </div>
+    <span style="font-weight: bold; color: #555;">19.654.454,00 AKZ</span> 
+    <br>
+    <span style="font-weight: bold; color: #555;">iPhone XV Pro Max</span>
+    <br>
+    <br>
+    <button class="add-button">
+      <img src="pictures/add.aac7b5d0.svg" alt="" height="12" width="12">
+      Adicionar
+    </button>
+
+    </section>
+  </div>
+  </div>
+  
+  <div class="footer-principal">
+    <hr>
+    <div class="footer">
+    <section>
+      <div class="insonia-description">
+        <h3>Insónia</h3>
+        <div>Insónia é uma empresa de vendas virtual, criada em 2023, atualmente conta mais de 00 clientes frequentes e mais de 00 productos a disposição dos nossos clientes. Cadastra-se, torna-se nosso cliente e faça parte da nossa história!</div>
+      </div>
+    </section>
+
+    <section>
+      <div class="inputs-registration">
+        <h3>Envie uma mensagem</h3>
+        <input type="text" class="small-input" placeholder="escreva seu email">
+        <input type="text" class="big-input" placeholder="descrição da mensagem">
+        <button class="btn-enviar">
+          Enviar
+        </button>
+      </div>
+    </section>
+
+    <section>
+      <div class="insonia-services">
+        <h3>Serviços</h3>
+        <br>
+        <span><img src="pictures/high-quality.9a6ca716.svg" width="20">Serviços de Vendas</span>
+        <span><img src="pictures/high-quality.9a6ca716.svg" width="20">Serviços de Entregas</span>
+        <span><img src="pictures/high-quality.9a6ca716.svg" width="20">Serviços Publicitários</span>
+      </div>
+    </section>
+
+    <section>
+      <div class="insonia-services">
+        <h3>Contacta-nos</h3>
+        <br>
+        <span><img src="pictures/high-quality.9a6ca716.svg" width="20">insonia.ao@gmail.com</span>
+        <span><img src="pictures/high-quality.9a6ca716.svg" width="20">Facebook</span>
+        <span><img src="pictures/high-quality.9a6ca716.svg" width="20">Instagram</span>
+      </div>
+    </section>
+    </div>
+  </div>
+
+  <div class="footer-secundaria">
+    <hr>
+    <p>© 2020 All Rights Reserved. Design by canga dev</p>
+  </div>
+</body>
+</html>

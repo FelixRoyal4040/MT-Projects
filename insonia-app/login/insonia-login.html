@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body{
+      height: 95vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      
+    }
+    div{
+      border: 1px solid black;
+      height: 420px;
+      width: 300px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      justify-content: center;
+      align-items: center;
+      padding: 20px 0px 0px 0px;
+      border-radius: 10px;
+      box-shadow: 1px 1px 20px black;
+    }
+    div h1{
+      font-family: Arial;
+      font-weight: bolder;
+      margin-bottom: 50px;
+    }
+
+    div input{
+     height: 30px;
+     width: 250px; 
+     border: none;
+     border-bottom: 1px solid #6929a5;
+     border-radius: 5px;
+     margin-bottom: 10px;
+    }
+    
+    .btn{
+      height: 30px;
+      width: 260px;
+      margin-bottom: 50px;
+      height: 36px;
+      border: none;
+      background-color: #6929a5;
+      color: white;
+      border-radius: 5px;
+      font-weight: bold;
+      font-size: 12pt;
+      transition: background-color 0.5s;
+      cursor: pointer;
+    }
+
+    .btn:hover{
+     background-color: rgba(48, 89, 255, 0.84); 
+    }
+
+    .btn-login{
+      height: 60px;
+      width: 300px;
+      border: none;
+      background-color: #6929a5;
+      color: white;
+      border-radius: 5px;
+      font-weight: bold;
+      font-size: 12pt;
+      cursor: pointer;
+      border-radius: 150px 150px 5px 5px;
+    }
+
+  </style>
+</head>
+<body>
+  <div>
+    <h1 style="color: #6929a5;">Criar conta</h1>
+    <input type="text" placeholder="User name">
+    <input type="text" placeholder="Email">
+    <input type="text" placeholder="Password">
+    <button class="btn">Cadastrar</button>
+    <button class="btn-login">Login</button>
+  </div>
+</body>
+</html>

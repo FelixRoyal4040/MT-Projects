@@ -1,0 +1,130 @@
+body{
+      font-family: Arial;
+      background-color: rgb(240,240,240);
+      
+    }
+    .electronics{
+      margin: 20px;
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+    .electronics section div{
+      width: 225px;
+      height: 250px;
+      background-color: white;
+      border-radius: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 15px;
+    }
+
+    .btn-favorite{
+      position: relative;
+      bottom: 95px;
+      left: 10px;
+      padding: 5px;
+      border-radius: 100%;
+      border: none;
+      background-color: #f1f4f9;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      padding: 7px;
+    }
+
+    .add-button{
+      height: 35px;
+      width: 120px;
+      border: 1px solid #555;
+      color: #555;
+      background-color: initial;
+      border-radius: 20px;
+      display: flex;
+      justify-content: space-evenly;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+      cursor: pointer;
+    }
+
+    .footer-principal{
+      margin: 150px 150px 0px 150px;
+
+    }
+    .footer{
+      display: flex;
+      flex-wrap: wrap;
+      gap: 100px;
+      margin-top: 30px;
+    }
+    .footer section div{
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: column; 
+    }
+
+    .insonia-description{
+      
+      display: flex;
+      gap: 30px;
+      color: black;
+    }
+
+    .insonia-description div{
+      width: 220px;
+      font-size: 11pt;
+      text-align: justify;
+      text-justify: inter-word;
+      color: #555;
+    }
+
+    .inputs-registration{
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      color: black;
+    }
+
+    .inputs-registration input{
+      border: none;
+      width: 200px;
+      font-size: 9pt;
+      
+    }
+
+    .small-input{
+      padding: 10px 5px;
+      margin-top: 10px;
+    }
+
+    .big-input{
+      padding: 25px 5px;
+    }
+
+    .btn-enviar{
+      border: none;
+      background-color: rgb(105, 41, 165);
+      color: white;
+      width: 80px;
+      height: 35px;
+    }
+
+    .insonia-services{
+      color: black;
+
+    }
+    .insonia-services span{
+      color: #555;
+      margin-top: 10px;
+    }
+    
+    .footer-secundaria{
+     margin: 150px 450px 30px 450px;
+     display: flex;
+     flex-direction: column;
+     flex-wrap: wrap;
+     color: #555; 
+    }
