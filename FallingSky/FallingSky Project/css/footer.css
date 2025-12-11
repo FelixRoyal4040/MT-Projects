@@ -1,0 +1,96 @@
+    *{
+      margin: 0;
+    }
+    body{
+      background-color: rgb(0,16,33);
+      font-family: Arial;
+    }
+
+    .footer-principal{
+      margin-top: 50px;
+    }
+    .footer{
+      display: flex;
+      flex-wrap: wrap;
+      gap: 100px;
+      margin: 30px 100px 0;
+    }
+    .footer section div{
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: column; 
+    }
+
+    .f-description{
+      display: flex;
+      gap: 30px;
+      color: rgb(45,112,143);
+    }
+
+    .f-description div{
+      width: 300px;
+      font-size: 11pt;
+      text-align: justify;
+      color: rgb(45,112,143);
+      opacity: 0.5; 
+    }
+
+    .inputs-registration{
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      color: rgb(45,112,143);
+    }
+
+    .inputs-registration input{
+      border: none;
+      width: 200px;
+      font-size: 9pt;   
+    }
+
+    .small-input{
+      padding: 10px 5px;
+      margin-top: 10px;
+    }
+
+    .big-input{
+      padding: 25px 5px;
+    }
+
+    .btn-enviar{
+      border: none;
+      background-color: rgb(45,112,143);
+      color: white;
+      width: 80px;
+      height: 35px;
+      cursor: pointer;
+    }
+
+    .f-services{
+      color: rgb(45,112,143);
+    }
+    .f-services span{
+      color: rgb(45,112,143);
+      opacity: 0.5; 
+      margin-top: 10px;
+      cursor: pointer;
+    }
+    
+    .footer-secundaria{
+     margin: 150px 0 50px;
+     text-align: center;
+     display: flex;
+     flex-direction: column;
+     flex-wrap: wrap;
+     color: rgb(45,112,143);
+     opacity: 0.5; 
+    }
+
+    @media (max-width: 500px){
+      .footer{
+        margin: 30px 250px 0 30px;
+      }
+      .footer-secundaria{
+        margin-left: 30px;
+      }
+    }

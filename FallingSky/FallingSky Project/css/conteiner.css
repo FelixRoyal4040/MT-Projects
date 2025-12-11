@@ -1,0 +1,44 @@
+    *{
+      margin: 0;
+    }
+
+    body{
+      font-family: Arial;
+    }
+
+    .conteiner{
+      background-image: url(../images/Fallingsky.png);
+      background-position: center;
+      background-repeat: no-repeat;
+      height: 650px;
+      width: 100%;
+      display: flex;
+      color: rgb(45,112,143);
+    }
+    .conteiner section h1{
+      font-size: 40pt;
+      margin-bottom: 20px;
+    }
+    .conteiner section h2{
+      font-size: 40pt;
+    }
+
+    @media (max-width: 850px){
+      .conteiner{
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+      }
+    }
+
+    @media (max-width: 450px){
+      .conteiner{
+        background-image: url(../images/Fallingsky.png);
+        background-position: center; 
+        background-size: cover;
+        height: 400px;
+      }
+      .conteiner section h1{
+        font-size: 20pt
+      }
+    }
