@@ -1,7 +1,7 @@
 <?php
   session_start();
 
-  header("Cache-control: no-store");
+  header("Cache-Control: no-store, no-cache, must-revalidate");
   header("Pragma: no-cache");
   header("Expires: 0");
 
@@ -118,7 +118,9 @@
               <th>Option</th>
             </tr>
             
-            <tbody class="table"></tbody>
+            <tbody class="js-table">
+
+            </tbody>
           </table>
         </div>
 
@@ -199,21 +201,7 @@
       </div>
       <!--Stock-->
       <div class="content" id="stock">
-        <h1 class="h">Stock</h1>
-        <div class="content-3">
-            <div class="table">
-              <div class="title2">
-                <h2>Products</h2>   
-              </div>
-              <table>
-                <tr>
-                
-                </tr>
-                
-                <tbody class="table"></tbody>
-              </table>
-            </div>
-          </div>
+        <h1>In Production</h1>   
       </div>
 
       

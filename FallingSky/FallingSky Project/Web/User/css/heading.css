@@ -1,0 +1,229 @@
+*{
+  margin: 0;
+}
+
+header{
+  position: absolute;
+  width: 100%;
+  height: 70px;
+  background-color: rgb(45,112,143);
+  font-size: 18px;
+  font-weight: 500;
+  z-index: 100;
+}
+
+header .container-header .brand-name{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+
+header .container-header .brand-name a{
+  text-decoration: none;
+  color: rgb(0,16,33);
+}
+
+
+.navbar-toggle{
+  display: none;
+  gap: 5px;
+  padding: 0;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+.navbar-toggle .bar{
+  background: rgb(0,16,33);
+  border: none;
+  display: block;
+  height: 6px;
+  width: 35px;
+  margin: 5px;
+  transition: all .3s ease-in-out
+}
+
+header .container-header{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 50px;
+}
+
+.navbar-menu{
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  white-space: nowrap;
+}
+.navbar-menu a{
+  text-decoration: none;
+  color: rgb(0,16,33);
+  position: relative;
+}
+.navbar-menu .selected{
+  color: rgb(83,164,195);
+  display: block;
+}
+.navbar-menu .selected::after{
+  background-color: rgb(83,164,195); 
+  content: '';
+  bottom: -5px;
+  right: 0;
+  width: 100%;
+  height: 2px;
+}
+
+.navbar-menu a::after{
+  content: '';
+  display: block;
+  width: 0;
+  height: 2px;
+  background: rgb(0,16,33);
+  transition: width .5s ease;
+  position: absolute;
+  bottom: -5px;
+  right: 0;
+}
+.navbar-menu a:hover{
+  color: rgba(83,164,195,.5);
+}
+.navbar-menu a:hover::after{
+  background-color: rgba(83,164,195,.5);
+  width: 100%;
+}
+
+header img{
+  border-radius: 50px;
+}
+
+.navbar-menu a{
+  text-decoration: none;
+  color: rgb(0,16,33);
+}
+.btn{
+  background-color: transparent;
+  color: rgb(0,16,33);
+  border: 2px solid rgb(0,16,33);
+  height: 50px;
+  width: 120px;
+  font-size: 18px;
+  font-weight: 500;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color .5s ease;
+  margin-left: 30px;
+}
+.btn:hover{
+  background-color: rgb(83,164,195);
+  border: none;
+  color: #fff;
+}
+.user{
+  flex: 1;
+  display: flex;
+  gap: 20px;
+  justify-content: end;
+  align-items: center;
+  cursor: pointer;
+}
+.user ion-icon{
+  height: 25px;
+  width: 25px;
+  color: rgb(0,16,33);
+  transition: color .5s ease;
+}
+
+.user .img-case{
+  position: relative;
+  width: 25px;
+  height: 25px;
+}
+
+.user .img-case ion-icon{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+.user ion-icon:hover{
+  color: rgb(83,164,195);
+}
+
+@media (max-width: 850px){
+  header .container-header  {
+    margin-left: 20px;
+  }
+
+  .navbar-toggle{
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: block;
+    z-index: 999;
+    padding: 15px;
+  }
+  .navbar-toggle .bar{
+    background-color: rgb(83,164,195);
+  }
+
+  .navbar-menu{
+    display: none;
+    margin-top: 60px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 40px;
+    font-size: 18px;
+    height: 100vh;
+    width: 250px;
+    background-color: rgb(45,112,143);
+  }
+  
+  .btn{
+    margin: 0;
+  }
+
+  .navbar-menu.active{
+    display: flex;
+  }
+  .navbar-toggle.active .bar:nth-child(2){
+    opacity: 0;
+  }
+
+  .navbar-toggle.active .bar:nth-child(1){
+    transform: translateY(11px) rotate(45deg);
+  }
+
+  .navbar-toggle.active .bar:nth-child(3){
+    transform: translateY(-11px) rotate(-45deg);
+  }
+}
+
+@media (max-width: 480px){
+  header{
+    height: 50px;
+    font-size: 12px;
+  }
+
+  header img{
+    width: 40px;
+  }
+
+  .navbar-toggle .bar{
+    height: 3px;
+    width: 25px;
+  } 
+
+  .navbar-toggle.active .bar:nth-child(2){
+    opacity: 0;
+  }
+  .navbar-toggle.active .bar:nth-child(1){
+    transform: translateY(8px) rotate(45deg);
+  }
+  .navbar-toggle.active .bar:nth-child(3){
+    transform: translateY(-8px) rotate(-45deg);
+  }
+}

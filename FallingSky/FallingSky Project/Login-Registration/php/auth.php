@@ -1,48 +1,86 @@
 <?php
-  session_start();
-  $conn = new PDO('mysql:host=localhost; dbname=teste_2', 'root', '');
+session_start();
+include_once 'connection/conn.php';
 
-  $email = $_POST['email'];
-  $password = $_POST['password'];
+$email = $_POST['email'];
+$password = $_POST['password'];
 
-  $search = $conn->prepare('SELECT * FROM user WHERE email = ? AND senha = ?');
-  $search->execute([$email, $password]);
-  $user= $search->fetch(PDO:: FETCH_ASSOC);
+$search = $conn->prepare('
+  SELECT 
+    u.id, u.nome, u.tipo_id, p.status
+  FROM user AS u
+  LEFT JOIN pro AS p ON p.user_id = u.id
+  WHERE u.email = ? AND u.senha = ?
+');
 
-  if($user){
-    $_SESSION['user_id']=$user['id'];
-    $_SESSION['nome']=$user['nome'];
-    $_SESSION['tipo_id'] = $user['tipo_id'];
-    $_SESSION['status'] = $user['status'];
+$search->execute([$email, $password]);
+$user = $search->fetch(PDO::FETCH_ASSOC);
 
+if (!$user) {
+  echo json_encode([
+    'success'=>false, 
+    'message' => 'Credenciais inválidas'
+  ]);
+  exit;
+}
 
-    if($_SESSION['tipo_id'] == 1){
-      header('Location: ../../Web/Admin/index.php');
-      exit;
+$_SESSION['user_id'] = $user['id'];
+$_SESSION['nome'] = $user['nome'];
+$_SESSION['tipo_id'] = $user['tipo_id'];
+$_SESSION['status'] = $user['status'];
 
-    }else if($_SESSION['tipo_id'] == 2){
-      header('Location: ../../Web/User/index.php');
-      exit;
+if ($user['tipo_id'] == 1) {
+  $_SESSION['user_id'] = $user['id'];
+  $_SESSION['nome'] = $user['nome'];
+  $_SESSION['tipo_id'] = 1;
 
-    }else if($_SESSION['tipo_id'] == 3){
+  echo json_encode([
+    'success'=>true, 
+    'redirect' => '../Web/Admin/index.php'
+  ]);
 
-      if($_SESSION['status'] == 'Pendente'){
-        echo 'Aguarda a resposta do Administrador';
-        exit;
-        
-      }else if($_SESSION['status'] == 'Recusado'){
-        echo 'Você foi recusado pelo Administrador';
-        exit;
+  exit;
+}
 
-      }else{
-        header('Location: ../../Web/Pro/index.php');
-      }
-    }
+if ($user['tipo_id'] == 2) {
+  $_SESSION['user_id'] = $user['id'];
+  $_SESSION['nome'] = $user['nome'];
+  $_SESSION['tipo_id'] = 2;
 
-    exit;
+  echo json_encode([
+    'success'=>true, 
+    'redirect' => '../Web/User/index.php'
+  ]);
+  
+  exit;
+}
 
-  }else{
-    echo 'Acesso Negado!';
+if ($user['tipo_id'] == 3) {
+
+  if ($user['status'] === 'Pendente') {
+    echo json_encode([
+      'success'=>false, 
+      'message' => 'Aguarde a resposta do administrador'
+    ]);
     exit;
   }
-?>
+
+  if ($user['status'] === 'Reprovado') {
+    echo json_encode([
+      'success'=>false, 
+      'message' => 'Recusado pelo administrador'
+    ]);
+    exit;
+  }
+
+  $_SESSION['user_id'] = $user['id'];
+  $_SESSION['nome'] = $user['nome'];
+  $_SESSION['tipo_id'] = 3;
+
+  echo json_encode([
+    'success'=>true, 
+    'redirect' => '../Web/Pro/index.php'
+  ]);
+  exit;
+}
+

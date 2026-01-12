@@ -1,22 +1,30 @@
 <?php
-	$conn = new PDO('mysql:host=localhost; dbname=teste_2', 'root', '');
+include_once 'connection/conn.php';
 
-	$nome  = $_POST['nome'];
-	$email = $_POST['email1'];
-	$senha = $_POST['password1'];
+try {
+    $conn->beginTransaction();
 
-	if (strpos($email, '.com.fs') !== false) {
-		$type = 1;
-		$status = 'Aprovado';
-	}else {
-		$type = 2;
-		$status = 'Aprovado';
-	}
+    $nome  = $_POST['nome'];
+    $email = $_POST['email1'];
+    $senha = $_POST['password1'];
 
-	$insert = $conn->prepare(
-		'INSERT INTO user(nome, email, senha, tipo_id, status) VALUES (?, ?, ?, ?, ?)'
-	);
-	$insert->execute([$nome, $email, $senha, $type, $status]);
-	
-	header('Location: ../login.php');
-?>
+    
+    if (strpos($email, '.com.fs') !== false) {
+        $type = 1; 
+    } else {
+        $type = 2;
+    }
+
+    $insert = $conn->prepare('INSERT INTO user (nome, email, senha, tipo_id) VALUES (?, ?, ?, ?)');
+
+    $insert->execute([$nome, $email, $senha, $type]);
+
+    $conn->commit();
+
+    header('Location: ../login.php');
+    exit;
+
+} catch (PDOException $e) {
+    $conn->rollBack();
+    echo 'Erro ao cadastrar: ' . $e->getMessage();
+}

@@ -1,19 +1,17 @@
     *{
       margin: 0;
     }
-    body{
-      background-color: rgb(0,16,33);
-      font-family: Arial;
-    }
 
     .footer-principal{
-      margin-top: 50px;
+      background-color: rgb(45, 112, 143);
+      
     }
     .footer{
       display: flex;
+      padding: 20px;
+      padding-left: 90px;
       flex-wrap: wrap;
-      gap: 100px;
-      margin: 30px 100px 0;
+      gap: 40px;
     }
     .footer section div{
       display: flex;
@@ -24,22 +22,24 @@
     .f-description{
       display: flex;
       gap: 30px;
-      color: rgb(45,112,143);
+      color: rgb(0,16,33);
+    }
+
+    .f-description span{
+      color: rgba(0,16,33, .5);
     }
 
     .f-description div{
       width: 300px;
       font-size: 11pt;
       text-align: justify;
-      color: rgb(45,112,143);
-      opacity: 0.5; 
+      color: rgb(0,16,33);
     }
 
     .inputs-registration{
       display: flex;
       flex-direction: column;
       gap: 10px;
-      color: rgb(45,112,143);
     }
 
     .inputs-registration input{
@@ -59,31 +59,40 @@
 
     .btn-enviar{
       border: none;
-      background-color: rgb(45,112,143);
-      color: white;
+      background-color: transparent;
+      color: rgb(0,16,33);
+      border: 2px solid rgb(0,16,33);
+      border-radius: 10px;
       width: 80px;
       height: 35px;
       cursor: pointer;
+      transition: background-color .3s ease;
+    }
+    
+    .btn-enviar:hover{
+      background-color: rgb(0,16,33);
+      color: rgb(45, 112, 143);
     }
 
     .f-services{
-      color: rgb(45,112,143);
+      color: rgb(0,16,33);
     }
     .f-services span{
-      color: rgb(45,112,143);
-      opacity: 0.5; 
+      color: rgb(0,16,33);
       margin-top: 10px;
       cursor: pointer;
     }
     
     .footer-secundaria{
-     margin: 150px 0 50px;
-     text-align: center;
-     display: flex;
-     flex-direction: column;
-     flex-wrap: wrap;
-     color: rgb(45,112,143);
-     opacity: 0.5; 
+      background-color: rgb(45,112,143);
+      height: fit-content;
+      padding: 10px;
+      text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      color: rgb(0,16,33);
     }
 
     @media (max-width: 500px){
@@ -93,4 +102,4 @@
       .footer-secundaria{
         margin-left: 30px;
       }
-    }
+    } 

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pro-Registration Panel</title>
+  <link rel="stylesheet" href="css/pro.css">
+  <style>
+    .input-box input{
+      color: #fff;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h2 class="logo">FALLINGSKY-TI</h2>
+  </header>
+
+  <div class="wrapper">
+    <a href="../index.php"><span class="icon-close"><ion-icon name="close-outline"></ion-icon>
+    </span></a>
+    <div class="form-box register">
+      <h3 style="color: rgb(83, 164, 195);">Registro de Profissionais</h3>
+      <form method="post" action="php/pro-post.php">
+        <div id="box-input">
+        <div class="box-input">
+          <div class="input-box">
+            <span class="icon"><ion-icon name="person-outline"></ion-icon></span>
+            <input type="text" name="nome" placeholder="Username" required>
+            <!--<label for="">Username</label>-->
+          </div>
+          <div class="input-box">
+            <span class="icon"><ion-icon name="mail-outline"></ion-icon></span>
+            <input type="email" name="email" placeholder="Email" required>
+            <!--<label for="">Email</label>-->
+          </div>
+        </div>
+        <div class="box-input">
+          <div class="input-box">
+            <span class="icon"><ion-icon name="lock-closed-outline"></ion-icon></span>
+            <input type="password" name="password" placeholder="Password" required>
+            <!--<label for="">Password</label-->
+          </div>
+
+          <div class="input-box">
+            <select name="area" id="" class="input">
+              <option value="" disabled selected>Area de Actuação</option>
+              <option value="TI">Técnico Informático</option>  
+            </select>
+          </div>
+        </div>
+        </div>
+        <div class="input-box textarea">
+          <textarea name="about" id="" rows="7" placeholder="About"  class="input2"></textarea>
+        </div>
+
+        <div class="remember-forgot"> 
+          <label><input type="checkbox" required>Eu concordo com os termos & condições</label>
+        </div>
+        
+        
+        <button type="submit" class="btn">Solicitar</button>
+        <div class="login-register">
+        <p>
+          Já tem uma conta? 
+          <a href="login.php" class="login-link">Login</a>
+        </p>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script src="js/login.js"></script>
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+</html>

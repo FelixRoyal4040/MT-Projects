@@ -33,6 +33,24 @@ header{
   font-weight: bold;
   cursor: pointer;
 }
+.pro-btn{
+  height: 40px;
+  width: 120px;
+  background-color: transparent;
+  border: 2px solid rgb(83,164,195);
+  border-radius: 6px;
+  font-size: 0.8em;
+  color: rgb(83,164,195);
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color .5s ease;
+}
+
+.pro-btn:hover{
+  background-color: rgb(83,164,195);
+  color: #fff;
+}
+
 
 .wrapper{
   position: relative;
@@ -103,7 +121,6 @@ header{
   background-color: transparent;
   border: none;
   outline: none;
-  
 }
 
 
@@ -182,5 +199,6 @@ header{
 }
 .input-box input::placeholder{
   font-size: 18px;
-  color: rgb(83,164,195);
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.5);
 }

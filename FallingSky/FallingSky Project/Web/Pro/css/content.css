@@ -1,0 +1,162 @@
+.container .content{
+  position: fixed;
+  right: 0;
+  padding-top: 10vh;
+  min-height: 90vh;
+  width: 80vw;
+  background: rgb(0,16,33);
+  display: none;
+}
+.container .content.show{
+  display: block;
+}
+.container .content.content-product{
+  position: relative;
+  right: 0;
+}
+
+.h{
+  color: rgb(83,164,195);
+  margin-left: 2vw;
+  font-size: 25px;
+}
+
+
+.icon-case{
+  color: #fff;
+}
+.icon-case ion-icon{
+  width: 40px;
+  height: 40px;
+}
+
+.container .content .cards{
+  padding: 20px 10px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.container .content .cards .card{
+  border: 1px solid;
+  width: 200px;
+  height: 150px;
+  background: rgb(7,46,72);
+  margin: 20px 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, .2), 0 6px 20px 0 rgba(0, 0, 0, .19);
+  border-radius: 6px;
+}
+
+
+.container .content .content-2{
+  min-height: 60vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.container .content .content-2 .table2{
+  border: 1px solid;
+  min-height: 50vh;
+  flex: 5;
+  background: rgb(7,46,72); 
+  margin: 0 25px 25px 25px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, .2), 0 6px 20px 0 rgba(0, 0, 0, .19);
+  display: flex;
+  flex-direction: column;
+  border-radius: 6px;
+}
+
+.container .content .content-2 .table{
+  flex: 2;
+  background: rgb(7,46,72);
+  min-height: 50vh;
+  margin: 0 25px 0 0;
+  box-shadow: 0 4px 8px 0 rgba(7,46,72, .2), 0 6px 20px 0 rgba(7,46,72, .19);
+  display: flex;
+  flex-direction: column; 
+  border-radius: 6px;
+}
+
+.container .content .content-2 .table table th,
+.container .content .content-2 .table2 table th{
+  color: rgb(83,164,195);
+}
+
+.container .content .content-2 .table table td,
+.container .content .content-2 .table2 table td{
+  color: #fff;
+}
+
+.container .content .content-2 .table table td:nth-child(1) ion-icon{
+  height: 40px;
+  width: 40px;
+  color: #fff;
+}
+
+.container .content .content-2 .table table td:nth-child(3) ion-icon{
+  height: 40px;
+  width: 40px;
+  color: #fff;
+  cursor: pointer;
+  transition: color .2s ease;
+}
+
+.container .content .content-2 .table table td:nth-child(3) ion-icon:hover{
+  color: rgb(45,112,143);
+}
+
+.container .content .content-3{
+  margin: 25px;
+}
+
+.container .content .content-3 .table,
+.container .content .content-3 .table2{
+  flex: 2;
+  background: rgb(7,46,72);
+  min-height: 50vh;
+  margin: 0 25px 0 0;
+  box-shadow: 0 4px 8px 0 rgba(7,46,72, .2), 0 6px 20px 0 rgba(7,46,72, .19);
+  display: flex;
+  flex-direction: column; 
+  border-radius: 6px;
+}
+
+.container .content .content-3 .table table th,
+.container .content .content-3 .table2 table th{
+  color: rgb(83,164,195);
+}
+
+.container .content .content-3 .table table td,
+.container .content .content-3 .table2 table td{
+  color: #fff;
+}
+
+.container .content .content-3 .table table td:nth-child(1) ion-icon{
+  height: 40px;
+  width: 40px;
+  color: #fff;
+}
+
+.container .content .content-3 .table table td:nth-child(3) ion-icon{
+  height: 40px;
+  width: 40px;
+  color: #fff;
+  cursor: pointer;
+  transition: color .2s ease;
+}
+
+.container .content .content-3 .table table td:nth-child(3) ion-icon:hover{
+  color: rgb(45,112,143);
+}
+
+
+
+.content-4{
+  display: none;
+}
