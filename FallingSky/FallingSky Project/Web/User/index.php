@@ -24,6 +24,9 @@
   <link rel="stylesheet" href="css/content.css">
   <link rel="stylesheet" href="css/footer.css">
   <link rel="stylesheet" href="css/media_query.css">
+  <link rel="stylesheet" href="css/contents/course.css">
+  <link rel="stylesheet" href="css/contents/store.css">
+  <link rel="stylesheet" href="css/contents/about.css">
 </head>
 <body>
   <!--
@@ -55,14 +58,13 @@
       </button>
       <nav class="navbar-menu">
         <a href="#dashboard" content-id="dashboard" class="selected">Home</a>
-        <a href="#" content-id="user">Cursos</a>
+        <a href="#" content-id="course">Cursos</a>
         <a href="#" content-id="loja">Loja</a>   
         <a href="#" content-id="sobre">Sobre nós</a>
-        <a href="#" content-id="ct">Contacto</a>
         <div class="user">
           <ion-icon name="notifications-outline" title="Notification"></ion-icon>
           <div class="img-case">
-            <ion-icon name="person-circle-outline" title="Profile"></ion-icon>
+            <ion-icon name="cart-outline"></ion-icon>
           </div>
           <ion-icon name="settings-outline" title="Settings"></ion-icon>
         </div>        
@@ -110,28 +112,30 @@
       <div class="cards">
         <div class="card c">
           <div class="box">
-            <h1 class="js-costumers-count count"></h1>
-            <h3>Buyers</h3>
+            <h3>Cart</h3>
+            <h1 class="js-costumers-count count">0</h1>
           </div>
           <div class="icon-case">
-              <ion-icon name="person-outline"></ion-icon>
+            <ion-icon name="cart-outline"></ion-icon>
           </div>
         </div>
       
         <div class="card c">
+
           <div class="box">
-            <h1 class="js-workers-count count"></h1>
-            <h3>Products</h3>
+            <h3>Pedidos</h3>
+            <h1 class="js-workers-count count">0</h1>
           </div>
           <div class="icon-case">
               <ion-icon name="archive-outline"></ion-icon>
           </div>
+          
         </div>
 
         <div class="card c">
           <div class="box">
-            <h1 class="js-admins-count count"></h1>
-            <h3>Courses</h3>
+            <h3>Compras</h3>
+            <h1 class="js-admins-count count">0</h1>
           </div>
           <div class="icon-case">
               <ion-icon name="clipboard-outline"></ion-icon>
@@ -143,7 +147,7 @@
         <div class="card">
           <div class="box">
             <h1 class="js-costumers-count count"></h1>
-            <h3>Buyers</h3>
+            <h3>Workers</h3>
           </div>
           <div class="icon-case">
               <ion-icon name="person-outline"></ion-icon>
@@ -172,8 +176,7 @@
         
           <div class="card">
             <div class="box">
-              <h1>0</h1>
-              <h3>Stock</h3>
+              <h3>Blog</h3>
           </div>
           <div class="icon-case">
               <ion-icon name="clipboard-outline"></ion-icon>
@@ -184,84 +187,66 @@
   
 
   <!--Dashboard-->
-    <div class="content" id="user">
+    <div class="content" id="course">
+      <div class="container-courses">
+        <h1 class="h1" style="color: #fff; margin-left: 30px;">Courses</h1>
+        <div class="Electronicos-Principal">
+        <div class="electronics">
+        <section>
+        <span style="font-weight: bold; color: #555;">19.654.454,00 AKZ</span> 
+        <span style="font-weight: bold; color: #555;">iPhone XV Pro Max</span>
+        <button class="add-button"> 
+          <ion-icon name="add-outline"></ion-icon>
+          Adicionar
+        </button>
+        </section>
+      </div>
+    </div>
+  </div>
+  </div>
+    <div class="content about" id="sobre">
       
-      <div class="container-box">
+      <div class="container-about">
+        <div class="letter">
         <p>
           <h1 class="h1"><?php
             echo "Welcome, User " . $_SESSION['nome'];
           ?></h1>
+          <br>
+          <h2 class="h1">FallingSky é uma ideia de projecto que, inicialmente, era apenas uma ideia de criança (nasceu em 2016) e agora pretendo torná-la real. O motivo da escolha do projecto dá-se pelo facto da evolução das tecnologias actuais, onde viso aos usuários terem o máximo de conhecimento possível das novas demandas do mercado digital, com a ajuda de profissionais, bem como, terem acesso a produtos de qualidade, ou seja, pretendo atingir as pessoas interessadas em aprender ou evoluir na área de TI, assim como consumir de equipamentos e soluções tecnológicas.
+          </h2>
         </p>
-        <br>
-        <p>  
-          <h2 class="h1">Em construção!</h2>
-        </p>
-
-        <div class="logout">
-          <a href="php/logout.php" style="text-decoration: none;"><ion-icon name="log-out-outline"></ion-icon>&nbsp; <span>Log Out</span></a>
         </div>
-      </div>
-    
-      </div>
-
-    <div class="content" id="sobre">
-      
-      <div class="container-box">
-        <p>
-          <h1 class="h1"><?php
-            echo "Welcome, User " . $_SESSION['nome'];
-          ?></h1>
-        </p>
-        <br>
-        <p>  
-          <h2 class="h1">Em construção!</h2>
-        </p>
-
-        <div class="logout">
-          <a href="php/logout.php" style="text-decoration: none;"><ion-icon name="log-out-outline"></ion-icon>&nbsp; <span>Log Out</span></a>
+        <div class="photo"> 
+          <!--<img src="pictures/generated_photos_6915bfd3c746c20011cebc60.jpg" alt="" height="200">-->
         </div>
+
       </div>
     
       </div>
 
 
       <div class="content" id="loja">
-      
-      <div class="container-box">
-        <p>
-          <h1 class="h1"><?php
-            echo "Welcome, User " . $_SESSION['nome'];
-          ?></h1>
-        </p>
-        <br>
-        <p>  
-          <h2 class="h1">Em construção!</h2>
-        </p>
 
-        <div class="logout">
-          <a href="php/logout.php" style="text-decoration: none;"><ion-icon name="log-out-outline"></ion-icon>&nbsp; <span>Log Out</span></a>
+        <div class="container-store">
+          <div class="Electronicos-Principal">
+            <div class="electronics">
+              <section>
+                <div>
+                  <img src="pictures/079fb574-e319-493d-a49f-e8fed3994201.5860519b.png" alt="" width="150" height="150">
+                  <button class="btn-favorite"><ion-icon name="heart-circle-outline"></ion-icon></button>
+                </div>
+                <span style="font-weight: bold; color: #fff;">19.654.454,00 AKZ</span>  
+                <span style="font-weight: bold; color: #fff;">iPhone XV Pro Max</span>
+                <button class="add-button"> 
+                  <ion-icon name="add-outline"></ion-icon>
+                  Adicionar
+                </button>
+              </section>
+            </div>
+          </div>
         </div>
-      </div>
     
-      </div>
-
-
-      <div class="content" id="ct">
-      
-      <div class="container-box">
-        <p>
-          <h1 class="h1"><?php
-            echo "Welcome, User " . $_SESSION['nome'];
-          ?></h1>
-        </p>
-        <br>
-        <p>  
-          <h2 class="h1">Em construção!</h2>
-        </p>
-
-        <div class="logout">
-          <a href="php/logout.php" style="text-decoration: none;"><ion-icon name="log-out-outline"></ion-icon>&nbsp; <span>Log Out</span></a>
-        </div>
       </div>
     
       </div>
