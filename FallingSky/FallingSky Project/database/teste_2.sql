@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 12, 2026 at 11:44 AM
+-- Generation Time: Jan 19, 2026 at 09:31 AM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -115,12 +115,43 @@ CREATE TABLE `class` (
 CREATE TABLE `courses` (
   `id` int(11) NOT NULL,
   `nome` varchar(120) NOT NULL,
-  `categoria` varchar(120) NOT NULL,
+  `categoria_id` int(11) NOT NULL,
   `preco` decimal(10,2) NOT NULL,
   `descricao` text NOT NULL,
   `data_publicacao` date DEFAULT curdate(),
-  `pro_id` int(11) NOT NULL
+  `pro_id` int(11) NOT NULL,
+  `status` enum('Ativo','Inativo') DEFAULT 'Ativo'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `courses`
+--
+
+INSERT INTO `courses` (`id`, `nome`, `categoria_id`, `preco`, `descricao`, `data_publicacao`, `pro_id`, `status`) VALUES
+(1, 'JavaScript: Full Course', 1, 2000.00, 'Curso Completo de JS\r\n', '2026-01-18', 1, 'Ativo');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `course_categories`
+--
+
+CREATE TABLE `course_categories` (
+  `id` int(11) NOT NULL,
+  `nome` varchar(120) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `course_categories`
+--
+
+INSERT INTO `course_categories` (`id`, `nome`) VALUES
+(1, 'Programming'),
+(2, 'Networks'),
+(3, 'IOT'),
+(4, 'Hardware'),
+(5, 'Software'),
+(6, 'AI');
 
 -- --------------------------------------------------------
 
@@ -145,7 +176,8 @@ INSERT INTO `pro` (`id`, `status`, `created_at`, `user_id`, `area_id`, `descrica
 (1, 'Aprovado', '2025-12-24 18:27:54', 12, 1, 'Sou pro'),
 (2, 'Aprovado', '2025-12-28 16:55:05', 13, 1, 'Tentando...'),
 (3, 'Pendente', '2026-01-08 17:56:05', 14, 1, 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi expedita laboriosam dolore nihil ab a asperiores blanditiis pariatur neque doloremque, aperiam facere amet tempora ullam! Expedita quod accusantium laboriosam animi.'),
-(4, 'Pendente', '2026-01-09 20:37:20', 15, 1, 'fff');
+(4, 'Pendente', '2026-01-09 20:37:20', 15, 1, 'fff'),
+(5, 'Recusado', '2026-01-16 20:09:39', 16, 1, 'ooooewndskdscsncksdfndska xcakskds casc sac asdcasc');
 
 -- --------------------------------------------------------
 
@@ -173,7 +205,8 @@ CREATE TABLE `products` (
 --
 
 INSERT INTO `products` (`id`, `nome`, `categoria_id`, `preco`, `descricao`, `data_lancamento`, `foto`, `quantidade`, `pro_id`, `created_at`, `updated_at`, `status`) VALUES
-(2, 'FallingSky', 1, 1000.00, '123', '2026-01-10', 'product_696272a058dc44.18100412.png', 12, 1, '2026-01-10 15:39:12', NULL, 'Ativo');
+(1, 'Red Banner Fallingsky', 1, 1000.00, 'Red Banner of FallingSky', '2026-01-18', 'product_696cb1b0e121c6.98232493.png', 12, 1, '2026-01-18 10:10:56', NULL, 'Ativo'),
+(2, 'FallingSky-TI', 2, 5000.00, 'FallingSky: Official Banner', '2026-01-18', 'product_696d141691a690.78879506.png', 1, 1, '2026-01-18 17:10:46', NULL, 'Ativo');
 
 -- --------------------------------------------------------
 
@@ -227,7 +260,8 @@ INSERT INTO `user` (`id`, `nome`, `email`, `senha`, `tipo_id`) VALUES
 (12, 'Gabriel', 'try@gmail.com', '123', 3),
 (13, 'Gamer Policarpo Conceição da Costa', 'try2@gmail.com', '123', 3),
 (14, 'Home', 'gg@gg.com', '123', 3),
-(15, 'ff', 'ff@ff.com', '123', 3);
+(15, 'ff', 'ff@ff.com', '123', 3),
+(16, 'Gamer Gumball World', 'gumball@gmail.com', '123', 3);
 
 --
 -- Indexes for dumped tables
@@ -273,7 +307,14 @@ ALTER TABLE `class`
 --
 ALTER TABLE `courses`
   ADD PRIMARY KEY (`id`),
-  ADD KEY `pro_id` (`pro_id`);
+  ADD KEY `pro_id` (`pro_id`),
+  ADD KEY `categoria_id` (`categoria_id`);
+
+--
+-- Indexes for table `course_categories`
+--
+ALTER TABLE `course_categories`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `pro`
@@ -343,13 +384,19 @@ ALTER TABLE `class`
 -- AUTO_INCREMENT for table `courses`
 --
 ALTER TABLE `courses`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- AUTO_INCREMENT for table `course_categories`
+--
+ALTER TABLE `course_categories`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `pro`
 --
 ALTER TABLE `pro`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `products`
@@ -367,7 +414,7 @@ ALTER TABLE `type_users`
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 
 --
 -- Constraints for dumped tables
@@ -397,7 +444,8 @@ ALTER TABLE `class`
 -- Constraints for table `courses`
 --
 ALTER TABLE `courses`
-  ADD CONSTRAINT `courses_ibfk_1` FOREIGN KEY (`pro_id`) REFERENCES `pro` (`id`);
+  ADD CONSTRAINT `courses_ibfk_1` FOREIGN KEY (`pro_id`) REFERENCES `pro` (`id`),
+  ADD CONSTRAINT `courses_ibfk_2` FOREIGN KEY (`categoria_id`) REFERENCES `course_categories` (`id`);
 
 --
 -- Constraints for table `pro`

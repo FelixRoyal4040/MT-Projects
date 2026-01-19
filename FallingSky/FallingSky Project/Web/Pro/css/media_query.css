@@ -46,6 +46,10 @@
 }
 
 @media screen and (max-width: 756px) {
+  .container .content{
+    position: absolute;
+  }
+
   .container .content .content-2 .table2{
     margin: 20px;
   }

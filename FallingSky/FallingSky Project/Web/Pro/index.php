@@ -34,9 +34,9 @@
       <li class="active" content-id="dashboard"><ion-icon name="home-outline"></ion-icon>&nbsp; <span>Home</span></li>
       <li content-id="user"><ion-icon name="archive-outline"></ion-icon>&nbsp; <span>Products</span></li>
       <li content-id="courses"><ion-icon name="clipboard-outline"></ion-icon>&nbsp; <span>Courses</span></li>
-      <li content-id="stock"><ion-icon name="clipboard-outline"></ion-icon>&nbsp; <span>Stock</span></li>
+      <!--<li content-id="stock"><ion-icon name="clipboard-outline"></ion-icon>&nbsp; <span>Stock</span></li>
       <li content-id="income"><ion-icon name="add-outline"></ion-icon>&nbsp; <span>Income</span></li>
-      <!--<li content-id="settings"><ion-icon name="settings-outline"></ion-icon>&nbsp; <span>Settings</span></li>
+      <li content-id="settings"><ion-icon name="settings-outline"></ion-icon>&nbsp; <span>Settings</span></li>
       <li content-id="user"><ion-icon name="person-outline"></ion-icon>&nbsp; <span>Sallers</span></li>-->
       <a href="php/logout.php" style="text-decoration: none;"><li><ion-icon name="log-out-outline"></ion-icon>&nbsp; <span>Log Out</span></li></a>
     </ul>
@@ -64,7 +64,7 @@
       <div class="cards">
         <div class="card">
           <div class="box">
-            <h1 class="js-costumers-count count"></h1>
+            <h1 class="js-buyers-coun count">0</h1>
             <h3>Buyers</h3>
           </div>
           <div class="icon-case">
@@ -74,7 +74,7 @@
       
         <div class="card">
           <div class="box">
-            <h1 class="js-workers-count count"></h1>
+            <h1 class="js-products-count count"></h1>
             <h3>Products</h3>
           </div>
           <div class="icon-case">
@@ -84,7 +84,7 @@
 
         <div class="card">
           <div class="box">
-            <h1 class="js-admins-count count"></h1>
+            <h1 class="js-courses-count count"></h1>
             <h3>Courses</h3>
           </div>
           <div class="icon-case">
@@ -94,7 +94,7 @@
         
           <div class="card">
             <div class="box">
-              <h1>0</h1>
+              <h1 class="js-stock-count count"></h1>
               <h3>Stock</h3>
           </div>
           <div class="icon-case">
@@ -106,11 +106,16 @@
       <div class="content-2">
         <div class="table2">
           <div class="title">
-            <h2>Tranding Products</h2>
+            <h2>Tranding Products & Courses</h2>
             <a href="" class="btn">View All</a>
           </div>
           <table>
-            
+            <tr>
+              <th>Image</th>
+              <th>Name</th>
+              <th>Avaliation</th>
+              <th>Sales</th>
+            </tr>
           </table>
         </div>
 
@@ -255,24 +260,29 @@
           </span>
           <div class="form-box">
             <h2 style="color: rgb(83, 164, 195);">Add New Course</h2>
-            <form method="POST" action="php/add_courses.php">
+            <form id="courseForm" enctype="multipart/form-data">
               <div class="input-box">
                 <span class="icon"><ion-icon name="tv-outline"></ion-icon></span>
                 <input type="text" name="course_name" placeholder="Course Name" required>
               </div>
               <div class="input-box">
-                <select name="category" id="" class="input">
+                <select name="course_category" id="" class="input">
                   <option value="" disabled selected>Category</option>
-                  <option value="Electronics">General Electronics</option> 
-                  <option value="Computers">Computers</option>
-                  <option value="Smartphones">Smartphones</option>     
+                  <option value="1">Programação</option> 
+                  <option value="2">Redes de Computador</option>
+                  <option value="3">IOT</option>
+                  <option value="4">Hardware</option>
+                  <option value="5">Software</option>
+                  <option value="6">IA</option>     
                 </select>
               </div>
               <div class="input-box">
                 <span class="icon"><ion-icon name="cash-outline"></ion-icon></span>
-                <input type="number" step="0.01" name="price" placeholder="Price" required>
+                <input type="number" step="0.01" name="course_price" placeholder="Price" required>
               </div>
-              
+              <div class="input-box textarea">
+                <textarea name="about_course" id="" rows="6" placeholder="Course description"  class="input2"></textarea>
+              </div>             
               <button type="submit" class="btnCourse">Add Course</button>
             </form>
           </div>
@@ -291,8 +301,9 @@
               <th>Category</th>
               <th>Price</th>
               <th>Status</th>
+              <th>Option</th>
             </tr>
-            <tbody id="course-form"></tbody>
+            <tbody id="course-list"></tbody>
           </table>
         </div>
         </div>
@@ -314,12 +325,16 @@
     </div>
   </div>
   <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 
-<script src="script.js"></script>
-<script src="js/script2.js"></script>
-<script src="js/form-modals.js"></script>
-<script src="js/product-AJAX.js"></script>
+  <script src="js/script.js"></script>
+  <script src="js/script2.js"></script>
+  <script src="js/product.js"></script>
+  <script src="js/course.js"></script>
+  <script src="js/form-modals.js"></script>
+  <script src="js/course-AJAX.js"></script>
+  <script src="js/product-AJAX.js"></script>
+
 
 </body>
 </html>

@@ -2,7 +2,7 @@ const form = document.getElementById('productForm');
 
 form.addEventListener('submit', function(event) {
   event.preventDefault();
-  
+
   fetch('php/add_product.php', {
     method: 'POST',
     body: new FormData(form)
@@ -16,10 +16,7 @@ form.addEventListener('submit', function(event) {
     }
   })
   .catch(error => {
-    console.error('Error:', error);
-    if(error.status === 'error'){
-      alert(error.message);
-      return;
-    }
-  });
+    console.error(error);
+    alert('Erro ao enviar o curso. Verifique a conexão ou o servidor.');
+  })
 });

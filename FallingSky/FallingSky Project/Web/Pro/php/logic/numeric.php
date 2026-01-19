@@ -3,7 +3,7 @@
     throw new Exception('Preço inválido.');
   }
 
-  if ($quantity < 0) {
+  if (isset($quantity) && $quantity < 0) {
     throw new Exception('Quantidade inválida.');
   }
 ?>

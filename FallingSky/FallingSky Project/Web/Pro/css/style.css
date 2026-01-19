@@ -39,6 +39,10 @@ h3{
   padding: 3px 8px;
   border: 2px solid rgb(45,112,143);
 }
+.btns{
+  display: flex;
+  gap: 8px;
+}
 
 .btn1{
   background: rgb(56, 167, 56);

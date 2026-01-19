@@ -1,6 +1,6 @@
 <?php
-  $conn = new PDO('mysql:host=localhost; dbname=teste_2', 'root', '');
-
+  include_once './connection/conn.php';
+  
   $user = $conn->prepare("
     SELECT u.id, u.nome, u.email, p.status 
     FROM user u 

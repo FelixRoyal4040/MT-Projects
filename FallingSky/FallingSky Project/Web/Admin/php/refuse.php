@@ -1,5 +1,5 @@
 <?php
-  $conn = new PDO('mysql:host=localhost; dbname=teste_2', 'root', '');
+  include_once './connection/conn.php';
 
   $refuse = $conn->prepare("
     UPDATE pro SET status = ?

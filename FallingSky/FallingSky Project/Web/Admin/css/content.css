@@ -154,3 +154,14 @@
 .content-4{
   display: none;
 }
+
+@media screen and (max-width: 756px){
+  .container .content .content-3 .table table th,
+  .container .content .content-3 .table2 table th{
+    font-size: 12px;
+  }
+  .container .content .content-3 .table table td,
+  .container .content .content-3 .table2 table td{
+    font-size: 12px;
+  }
+}

@@ -94,7 +94,7 @@
         
           <div class="card">
             <div class="box">
-              <h1>0</h1>
+              <h1 class="js-stock-count count"></h1>
               <h3>Stock</h3>
           </div>
           <div class="icon-case">
@@ -154,9 +154,8 @@
               <th>Profile</th>
               <th>Name</th>
               <th>Email</th>
-              <th>Status</th>
             </tr>
-            <tbody class="T2"></tbody>
+            <tbody class="js-users_table-costumers"></tbody>
           </table>
         </div>
       </div>
@@ -171,10 +170,11 @@
                 <th>Profile</th>
                 <th>Name</th>
                 <th>Email</th>
+                <th>Area de Actuação</th>
                 <th>Status</th>
               </tr>
               
-              <tbody class="table"></tbody>
+              <tbody class="js-users_table-workers"></tbody>
             </table>
           </div>
         </div>
@@ -201,7 +201,48 @@
       </div>
       <!--Stock-->
       <div class="content" id="stock">
-        <h1>In Production</h1>   
+        <h1 class="h">Stock</h1>
+              <div class="content-3">
+        <div class="table">
+          <div class="title2">
+            <h2>Products</h2>          
+          </div>
+          <table>
+            <tr>
+              <th>#</th>
+              <th>Image</th>
+              <th>Name</th>
+              <th>Category</th>
+              <th>Price</th>
+              <th>Quantity</th>
+              <th>Status</th>
+              <th>Profissional</th>
+              <th>Option</th>
+            </tr>
+            <tbody id="product-list"></tbody>
+          </table>
+        </div>
+        </div>
+        
+        <div class="content-3">
+        <div class="table">
+          <div class="title2">
+            <h2>Courses</h2>          
+          </div>
+          <table>
+            <tr>
+              <th>#</th>
+              <th>Name</th>
+              <th>Category</th>
+              <th>Price</th>
+              <th>Status</th>
+              <th>Profissional</th>
+              <th>Option</th>
+            </tr>
+            <tbody id="course-list"></tbody>
+          </table>
+        </div>
+        </div>
       </div>
 
       
@@ -216,9 +257,12 @@
     </div>
   </div>
   <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 
-<script src="script.js"></script>
-<script src="js/script2.js"></script>
+  <script src="js/script.js"></script>
+  <script src="js/users_script.js"></script>
+  <script src="js/script2.js"></script>
+  <script src="js/product.js"></script>
+  <script src="js/course.js"></script>
 </body>
 </html>

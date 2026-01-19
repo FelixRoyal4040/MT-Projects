@@ -116,10 +116,11 @@
 }
 
 .container .content .content-3 .table,
-.container .content .content-3 .table2{
+.container .content .content-3 .table2{ 
   flex: 2;
   background: rgb(7,46,72);
   min-height: 50vh;
+  width: 100%;
   margin: 0 25px 0 0;
   box-shadow: 0 4px 8px 0 rgba(7,46,72, .2), 0 6px 20px 0 rgba(7,46,72, .19);
   display: flex;
@@ -159,4 +160,15 @@
 
 .content-4{
   display: none;
+}
+
+@media screen and (max-width: 756px){
+  .container .content .content-3 .table table th,
+  .container .content .content-3 .table2 table th{
+    font-size: 12px;
+  }
+  .container .content .content-3 .table table td,
+  .container .content .content-3 .table2 table td{
+    font-size: 12px;
+  }
 }

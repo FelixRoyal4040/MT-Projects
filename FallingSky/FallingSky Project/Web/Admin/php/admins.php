@@ -1,5 +1,5 @@
 <?php
-  $conn= new PDO('mysql:host=localhost;dbname=teste_2', 'root', '');
+  include_once './connection/conn.php';
 
   $count = $conn->prepare('SELECT COUNT(*) AS total FROM user WHERE tipo_id=?');
   $count->execute([1]);

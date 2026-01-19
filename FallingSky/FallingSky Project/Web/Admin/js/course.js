@@ -10,6 +10,7 @@ fetch('php/fetch_courses.php')
         <td>${course.categoria}</td>
         <td>${Number(course.preco).toFixed(2)} Kz</td>
         <td>${course.status}</td>
+        <td>${course.profissional}</td>
         <td>
           <div class="btns">
             <button class="edit-btn" data-id="${course.id}"><ion-icon name="pencil-outline"></ion-icon></button>
