@@ -95,11 +95,17 @@
       color: rgb(0,16,33);
     }
 
-    @media (max-width: 500px){
+    @media (min-width: 320px) and (max-width: 500px){
       .footer{
-        margin: 30px 250px 0 30px;
+        padding-left: 30px;
+      }
+      .f-description div{
+        width: 250px;
       }
       .footer-secundaria{
-        margin-left: 30px;
+        padding-left: 30px;
+      }
+      .footer-secundaria p{
+        font-size: 10px;
       }
     } 

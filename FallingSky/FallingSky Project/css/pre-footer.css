@@ -6,13 +6,14 @@
       background-color: rgba(0,16,33,.5);
       color: #fff;
       font-family: Arial;
-      padding-bottom: 40px;
+      padding: 20px 0;
+      width: 100%;
     }
     .footer-conteiner div{
       backdrop-filter: blur(5px);
     }
     .sla-conteiner{
-      margin-left: 90px;
+      padding-left: 90px;
       padding-top: 40px;
     }
     .sla-conteiner h1{
@@ -21,16 +22,26 @@
     }
 
     .sla-conteiner div{
-      width: 350px;
+      width: 250px;
     }
 
     .btn-contact{
       margin-top: 20px;
-      margin-left: 90px;
       background-color: rgb(45,112,143);
       border: none;
       height: 36px;
+      width: fit-content;
+      padding: 10px;
       border-radius: 10px;
       color: white;
       cursor: pointer;
+    }
+
+    @media (min-width: 320px) and (max-width: 850px){
+      .sla-conteiner{
+        padding: 10px 45px;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+      }
     }

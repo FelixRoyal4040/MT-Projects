@@ -55,4 +55,14 @@
       }
     }
 
+    @media (min-width: 320px) and (max-width: 800px){
+      .div-sla section{
+        height: 170px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 10px;
+      }
+    }
+
     

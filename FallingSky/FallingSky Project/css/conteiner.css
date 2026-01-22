@@ -31,12 +31,12 @@
       }
     }
 
-    @media (max-width: 450px){
+    @media (min-width: 320px) and (max-width: 850px){
       .conteiner{
         background-image: url(../images/Fallingsky.png);
         background-position: center; 
-        background-size: cover;
-        height: 400px;
+        background-size: 400px;
+        height: 556px;
       }
       .conteiner section h1{
         font-size: 20pt
