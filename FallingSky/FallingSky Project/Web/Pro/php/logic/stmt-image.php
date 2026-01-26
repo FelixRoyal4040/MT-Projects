@@ -16,7 +16,7 @@
   }
 
   $newName = uniqid('product_', true) . '.' . $ext;
-  $uploadDir = '../uploads/products/';
+  $uploadDir = '../../../uploads/products/';
   $uploadPath = $uploadDir . $newName;
 
   if (!is_dir($uploadDir)) {

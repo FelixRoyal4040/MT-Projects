@@ -11,7 +11,7 @@ fetch('php/fetch_products.php')
     <tr>
       <td>${product.id}</td>
       <td>
-        <img src="uploads/products/${product.foto}" height="60">
+        <img src="../../uploads/products/${product.foto}" height="60">
       </td>
       <td>${product.nome}</td>
       <td>${product.categoria}</td>
