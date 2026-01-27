@@ -14,22 +14,28 @@
   <!--Navigation-->
   <nav class="navbar">
     <a href="#home" class="logo">FallingFolio</a>
+    <div class="navbar-toggle">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
     <ul class="nav-links">
-      <li><a href="#home">Home</a></li>
+      <li><a href="#home" class="active">Home</a></li>
       <li><a href="#skills">Skills</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#contact">Contact</a></li>
+      <li><a href="#projects">Projectos</a></li>
+      <li><a href="contents/about.html">Sobre</a></li>
+      <li><a href="#contact">Contactos</a></li>
     </ul>
   </nav>
 
   <!--Hero Section-->
   <section id="home" class="hero">
     <div class="hero-content">
-      <h1>Web <br> Developer</h1>
-      <p>Building digital experiences that merge creativity with technology</p>
-      <p class="highlight">Specializing in modern web development and cyber systems</p>
-      <a href="https://www.linkedin.com/in/f%C3%A1bio-policarpo-86442536b/" target="_blank" class="cta-button"><i class="fa-solid fa-user-plus"></i> Let's Connect</a>
-      <a href="#contact" class="cta-button"><i class="fa-solid fa-download"></i> Download my CV</a>
+      <h1>Desenvolvedor<br>Web</h1>
+      <p>Criando experiências digitais que unem criatividade e tecnologia.</p>
+      <p class="highlight">Em constante formação no desenvolvimento web moderno e sistemas cibernéticos.</p>
+      <a href="https://www.linkedin.com/in/f%C3%A1bio-policarpo-86442536b/" target="_blank" class="cta-button"><i class="fa-solid fa-user-plus"></i> Conectar</a>
+      <a href="#contact" class="cta-button"><i class="fa-solid fa-download"></i> Download meu CV</a>
     </div>
     <div class="hero-image">
       <img src="img/profile.jpg" alt="" class="profile-img">
@@ -38,16 +44,16 @@
 
   <!--Skills Section-->
   <section id="skills" class="skills">
-    <h2>Technical Expertise</h2>
+    <h2>Experiências Técnicas</h2>
     <div class="skills-grid">
       <div class="skill-card">
         <i class="fa-solid fa-code"></i>
-        <h3>Frontend Development</h3>
+        <h3>Frontend Skills</h3>
         <p>HTML5, CSS3, JavaScript</p>
       </div>
       <div class="skill-card">
         <i class="fa-solid fa-server"></i>
-        <h3>Backend Development</h3>
+        <h3>Backend Skills</h3>
         <p>PHP, MySQL</p>
       </div>
     </div>
@@ -55,27 +61,58 @@
 
   <!--Projects Section-->
   <section id="projects" class="skills">
-    <h2>Projects Developed</h2>
+    <h2>Projectos Desenvolvidos</h2>
     <div class="skills-grid">
-      <div class="skill-card p">
-        <a href="https://fallingsky.rf.gd/" target="_blank" class="void-a"><div class="void">
-          <h3>FallingSky Project</h3>
-          <p>Connect to the Future</p>
+      <div class="project-card">
+        <div class="image">
+          <img src="img/Fallingsky.png" alt="" class="photoshop-projects">
         </div>
-      </a>
+        <h3>FallingSky Project</h3>
+        <p>
+          FallingSky é um ecossistema digital em desenvolvimento com foco em educação tecnológica, interações digitais e soluções em TI. O projecto nasce da necessidade de aproximar profissionais experientes da área de tecnologia de pessoas interessadas em aprender, evoluir e acompanhar as novas exigências do mercado digital. A plataforma visa oferecer cursos, conteúdos, produtos e sistemas que impulsionem o crescimento técnico e profissional dos usuários.
+        </p>
+        <br>
+        <p>
+          Ferramentas Utilizadas:
+          <button>HTML5</button>
+          <button>CSS3</button>
+          <button>PHP</button>
+          <button>MySQL</button>
+        </p>
+        <br>
+        <a href="https://fallingsky.rf.gd/" target="_blank" class="void-a"><button class="btn-explore">
+          Ver Projecto <i class="fa-solid fa-arrow-right"></i>
+        </button>
+        </a>  
       </div>
-      <div class="skill-card p2">
-        <a href="" class="void-a"><div class="void">
-          <h3>SAC-HGL Project</h3>
-          <p>We're here to heal you</p>
+      <div class="project-card">  
+        <div class="image">
+          <img src="img/SAC.png" alt="" class="photoshop-projects">
         </div>
+        <h3>SAC-HGL Project</h3>
+        <p>
+          O SGA-HGL é um Sistema de Agendamento de Consultas desenvolvido para o Hospital Geral de Luanda, com o objectivo de digitalizar e optimizar o processo de marcação de consultas médicas. A plataforma permite que pacientes realizem agendamentos online, enquanto administradores e profissionais de saúde gerem horários, especialidades e atendimentos de forma eficiente, reduzindo filas, erros manuais e melhorando a organização hospitalar.
+        </p>
+        <br>
+        <p>
+          Ferramentas Utilizadas:
+          <button>HTML5</button>
+          <button>CSS3</button>
+          <button>PHP</button>
+          <button>MySQL</button>
+        </p>
+        <br>
+        <a href="https://fallingsky.rf.gd/" target="_blank" class="void-a">
+          <button class="btn-explore">
+          Ver Projecto <i class="fa-solid fa-arrow-right"></i>
+        </button>
       </a>
       </div>
     </div>
   </section>
 
   <!--Footer-->
-  <footer>
+  <footer id="contact">
     <p>&copy; 2026 FallingFolio. All rights reserved.</p>
     <div class="social-links">
       <a href="https://github.com/FelixRoyal4040" target="_blank"><i class="fa-brands fa-github"></i></a>

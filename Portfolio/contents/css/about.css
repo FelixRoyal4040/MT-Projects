@@ -1,0 +1,142 @@
+* {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Segoe UI", Arial, sans-serif;
+    }
+
+    body {
+      background: radial-gradient(circle at top right, #2a2a2a, #000 80%);
+      color: #eaeaea;
+      min-height: 100vh;
+    }
+
+    header {    
+      padding: 25px 90px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    header .logo {
+      font-size: 1.6rem;
+      font-weight: 600;
+      color: #ccc;
+      letter-spacing: 1px;
+    }
+    header .logo a{
+      text-decoration: none;
+      color: #ccc;
+    }
+
+    .btn-arrow {
+      color: #ccc;
+      text-decoration: none;
+      font-size: 0.95rem;
+      transition: color 0.3s;
+      cursor: pointer;
+      padding: 5px;
+      border: none;
+    }
+    .btn-arrow i{
+      color: black;
+    }
+    .btn-arrow:hover{
+      background-color: #2a2a2a;
+    }
+    .btn-arrow i:hover{
+      color: #fff;
+    }
+
+    nav a:hover {
+      color: #fff;
+    }
+
+    main {
+      max-width: 1100px;
+      margin: 80px auto;
+      padding: 0 40px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: center;
+    }
+
+    .about-text h1 {
+      font-size: 3rem;
+      margin-bottom: 20px;
+      color: #f2f2f2;
+    }
+
+    .about-text h1 span {
+      color: rgb(91, 89, 89);
+    }
+
+    .about-text p {
+      font-size: 1.05rem;
+      line-height: 1.8;
+      color: #bfbfbf;
+      margin-bottom: 20px;
+    }
+
+    .about-text .highlight {
+      color: #eaeaea;
+      font-weight: 500;
+    }
+
+    .about-card {
+      background: rgba(255,255,255,0.04);
+      border-radius: 20px;
+      padding: 40px;
+      box-shadow: 0 20px 50px rgba(0,0,0,0.6);
+      backdrop-filter: blur(6px);
+    }
+
+    .about-card h2 {
+      font-size: 1.6rem;
+      margin-bottom: 20px;
+      color: #f0f0f0;
+    }
+
+    .about-card ul {
+      list-style: none;
+    }
+
+    .about-card li {
+      margin-bottom: 15px;
+      font-size: 0.95rem;
+      color: #bdbdbd;
+    }
+
+    .about-card li strong {
+      color: #eaeaea;
+    }
+
+    footer {
+      text-align: center;
+      padding: 40px 20px;
+      color: #777;
+      font-size: 0.85rem;
+    }
+
+    @media(max-width: 900px){
+      main {
+        display: flex;
+        flex-direction: column-reverse;
+        margin-top: 40px;
+      }
+    }
+
+    @media(max-width: 600px){
+      header {
+        padding: 20px 40px;
+      }
+
+      .about-text h1 {
+        font-size: 2.2rem;
+      }
+
+      .about-card {
+        padding: 30px;
+      }
+    }
